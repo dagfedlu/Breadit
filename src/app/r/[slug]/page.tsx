@@ -3,6 +3,7 @@ import { db } from "@/lib/db";
 import { INFINITE_SCROLL_PAGINATION_RESULTS } from "@/config";
 import { notFound } from "next/navigation";
 import MiniCreatePost from "@/components/MiniCreatePost";
+import PostFeed from "@/components/PostFeed";
 
 interface PageProps {
   params: {
@@ -44,6 +45,8 @@ const page = async ({ params }: PageProps) => {
     </h1>
     {/* add a component that allows users to participate - mini post inside the subreddit */}
     <MiniCreatePost session={session} />
+    {/* show posts after refresh */}
+     <PostFeed initialPosts={subreddit.posts} subredditName={subreddit.name} /> 
   </>
   );
 };

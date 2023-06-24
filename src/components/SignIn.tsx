@@ -14,7 +14,7 @@ const SignIn: FC = () => {
           User Agreement and Pricacy Policy.
         </p>
         {/* sign in form - we can not add functionality
-        her since this is a server component - no user interaction
+        here since this is a server component - no user interaction
         to add that type of functionality we use a client component like so */}
         <UserAuthForm />
         <p className=" px-8 text-center text-sm text-zinc-700">
